@@ -23,7 +23,7 @@ interface PayoutDialogProps {
     amount_in_USD: string;
     paypal_id: string;
   };
-  setPayouts: React.Dispatch<React.SetStateAction<PayoutData[]>>;
+  setPayouts: React.Dispatch<React.SetStateAction<any[]>>;
 }
 
 export default function PayoutDialog({

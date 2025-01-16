@@ -1,5 +1,5 @@
 
-import CustomSignUp from '@/app/_components/CustomSignUp';
+
 import Logo from '@/app/_components/Logo';
 import { SignUp } from '@clerk/nextjs';
 
