@@ -1,0 +1,75 @@
+/* customScrollbar.css */
+.custom-scrollbar-container {
+    height: 100%; /* Ensures it takes up full remaining height */
+    overflow-y: auto; /* Enable vertical scroll */
+  }
+  
+  /* Custom scrollbar styles */
+  .custom-scrollbar-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar-container::-webkit-scrollbar-thumb {
+    background-color: #3b82f6; /* Blue scrollbar thumb */
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar-container::-webkit-scrollbar-track {
+    background: #e0e7ff; /* Lighter blue track */
+  }
+  .loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Adjust height as needed */
+    background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #ff0080); /* Gradient colors */
+    background-size: 300% 100%;
+    animation: flow 1.5s linear infinite;
+    z-index: 50; /* Ensure it stays on top */
+  }
+  .card-container {
+    position: relative;
+    border-radius: 0.5rem; /* Match Card's border-radius */
+    overflow: hidden; /* Prevent the animation from overflowing */
+  }
+  
+  .card-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px; /* Ray height (adjust as needed) */
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 0, 127, 0.8),
+      rgba(255, 127, 0, 0.8),
+      rgba(127, 255, 0, 0.8),
+      rgba(0, 255, 127, 0.8),
+      rgba(0, 127, 255, 0.8),
+      rgba(127, 0, 255, 0.8),
+      rgba(255, 0, 127, 0.8)
+    );
+    background-size: 300% 100%; /* Allows the animation to move smoothly */
+    z-index: 10;
+    animation: rayFlow 1s linear infinite;
+    opacity: 0; /* Hidden by default */
+    pointer-events: none;
+  }
+  
+  .ray-active::before {
+    opacity: 1; /* Show the ray animation when active */
+  }
+  
+  @keyframes rayFlow {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+  
+  
+  
