@@ -1,16 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
+import { Task } from "@/lib/interfaces";
 
-interface Task {
-  review_feedback?: string;
-  project_id?: string;
-  category?: string;
-  user_id?: string;
-  status?: string;
-  created?: string;
-  recordId: string;
-}
+
 
 interface TaskResponse {
   task_data: Task[];

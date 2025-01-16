@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { PayoutData } from "@/lib/interfaces";
 
 interface PayoutDialogProps {
   open: boolean;
@@ -22,7 +23,7 @@ interface PayoutDialogProps {
     amount_in_USD: string;
     paypal_id: string;
   };
-  setPayouts: React.Dispatch<React.SetStateAction<any[]>>;
+  setPayouts: React.Dispatch<React.SetStateAction<PayoutData[]>>;
 }
 
 export default function PayoutDialog({

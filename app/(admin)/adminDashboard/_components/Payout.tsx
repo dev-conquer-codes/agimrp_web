@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import PayoutDialog from './PayoutDialog';
+import { PayoutData } from '@/lib/interfaces';
 
-interface PayoutData {
-  user_id: string;
-  amount: string;
-  amount_in_USD: string;
-  paypal_id: string;
-  status: string; // "completed" or "pending"
-}
 
 export default function Payout() {
   const [payouts, setPayouts] = useState<PayoutData[]>([]);

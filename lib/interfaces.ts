@@ -138,3 +138,19 @@ export interface Instruction {
     created: string;
     recordId: string;
   }
+  export interface PayoutData {
+    user_id: string;
+    amount: string;
+    amount_in_USD: string;
+    paypal_id: string;
+    status: string; // "completed" or "pending"
+  }
+  export interface Task {
+    review_feedback?: string;
+    project_id?: string;
+    category?: string;
+    user_id?: string;
+    status?: string;
+    created?: string;
+    recordId: string;
+  }

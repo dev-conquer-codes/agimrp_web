@@ -10,7 +10,7 @@ const TaskerDialog = ({ selectedTasker, onClose }: { selectedTasker: Tasker; onC
   <Dialog open={true} onOpenChange={onClose}>
     <DialogContent className="max-w-lg max-h-[85vh] mx-auto p-6 rounded-xl shadow-lg bg-white overflow-y-auto">
       <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-        {selectedTasker.name}'s Performance
+        {selectedTasker.name}&apos;s Performance
       </h2>
       <div className="grid grid-cols-2 gap-4 mb-6">
         <div className="bg-blue-50 rounded-lg p-4 text-center">
